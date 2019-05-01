@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private EditText nameEdite;
-    private EditText passwordEdite;
+    private EditText emailEdite;
     private TextView resultText;
 
     @Override
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameEdite = findViewById(R.id.edit_name);
-        passwordEdite = findViewById(R.id.edit_password);
+        emailEdite = findViewById(R.id.edit_email);
         resultText = findViewById(R.id.text_result);
 
         findViewById(R.id.button_ok).setOnClickListener(okClickListener);
@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             String name = String.valueOf(nameEdite.getText());
-            String password = String.valueOf(passwordEdite.getText());
+            String password = String.valueOf(emailEdite.getText());
 
-           String message = getString(R.string.message_confirmation, name, password);
-           resultText.setText(message);
+            String message = getString(R.string.message_confirmation, name, password);
+            resultText.setText(message);
 
         }
 
@@ -42,12 +42,15 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener clearClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            nameEdite.setText(null);
-            passwordEdite.setText(null);
-            resultText.setText(null);
+            if (emailEdite.getText().length() != 0 || nameEdite.getText().length() != 0) {
+                emailEdite.getText().clear();
+                nameEdite.getText().clear();
+                resultText.setText("");
+
+            }
+
 
         }
 
-        ;
     };
 }

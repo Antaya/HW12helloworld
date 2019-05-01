@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">HW1.2.hello-world</string>
     <string name="title">Подписка</string>
-    <string name="name">Name</string>
+    <string name="name">Имя пользователя</string>
     <string name="button_ok">OK</string>
     <string name="button_clear">Отмена</string>
     <string name="message_confirmation">Подписка на рассылку успешно оформлена для пользователя %1$s на электронный адрес %2$s</string>
     <string name="buttonClear">ОТМЕНА</string>
     <string name="buttonOk">OK</string>
+    <string name="email">Электронная почта</string>
 </resources>

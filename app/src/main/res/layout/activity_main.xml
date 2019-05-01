@@ -32,13 +32,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/name"
-        app:layout_constraintBottom_toTopOf="@+id/edit_password"
+        app:layout_constraintBottom_toTopOf="@+id/edit_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
     <EditText
-        android:id="@+id/edit_password"
+        android:id="@+id/edit_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -46,7 +46,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:inputType="textPassword"
+        android:inputType="textWebEmailAddress"
+        android:hint="@string/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
         app:layout_constraintVertical_bias="0.12" />
 
     <Button
@@ -82,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toEndOf="@+id/button_ok"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
         app:layout_constraintVertical_bias="0.12" />
 
     <TextView
@@ -92,8 +93,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edit_password"
-        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintEnd_toEndOf="@+id/edit_email"
+        app:layout_constraintStart_toStartOf="@+id/edit_email"
         app:layout_constraintTop_toBottomOf="@+id/button_clear"
         app:layout_constraintVertical_bias="0.254" />
 
